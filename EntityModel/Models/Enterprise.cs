@@ -3,6 +3,6 @@
 {
     public class Enterprise : AbstractEntity
     {
-       
+        
     }
 }
