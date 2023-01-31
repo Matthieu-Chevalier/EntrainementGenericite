@@ -13,12 +13,10 @@ namespace EntityModel.Services
     public class GenericReadonlyService<TEntity> : IGenericReadonlyService<TEntity> where TEntity : AbstractEntity
     {
         private readonly GenericReadOnlyRepository<TEntity> _repository;
-        private readonly DbContext _dbContext;
 
-        public GenericReadonlyService(GenericReadOnlyRepository<TEntity> repository, DbContext dbContext)
+        public GenericReadonlyService(GenericReadOnlyRepository<TEntity> repository)
         {
             _repository = repository;
-            _dbContext = dbContext;
         }
 
         public IList<TEntity> FindAllWhere(Expression<Func<TEntity, bool>> expression) => _repository.FindAllWhere(expression);
