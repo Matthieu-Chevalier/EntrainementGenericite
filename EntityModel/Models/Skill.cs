@@ -11,7 +11,7 @@ namespace EntityModel.Models
 
         public bool IsHard { get; set; } = false;
 
-        public Category Category { get; set; }
+        public Category? Category { get; set; }
 
         public int? CategoryId { get; set; } = 1;
 

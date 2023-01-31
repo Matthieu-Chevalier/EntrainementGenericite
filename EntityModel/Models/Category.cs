@@ -2,7 +2,7 @@
 {
     public class Category : AbstractEntity
     {
-        public IEnumerable<Skill> Skills { get; set; }
+        public IEnumerable<Skill>? Skills { get; set; }
         // Langage, BDD, Cadre
     }
 }
