@@ -11,8 +11,8 @@ namespace EntityModel.Repositories
 {
     public class GenericReadOnlyRepository<TEntity> : IGenericReadOnlyRepository<TEntity> where TEntity : AbstractEntity
     {
-        private readonly DbContext _dbContext;
-        private readonly DbSet<TEntity> _dbSet;
+        public readonly DbContext _dbContext;
+        public readonly DbSet<TEntity> _dbSet;
 
         public GenericReadOnlyRepository(DbContext dbContext)
         {

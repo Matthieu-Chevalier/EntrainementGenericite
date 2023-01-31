@@ -10,11 +10,11 @@ using System.Threading.Tasks;
 
 namespace EntityModel.Services
 {
-    public class GenericReadonlyService<TEntity> : IGenericReadonlyService<TEntity> where TEntity : AbstractEntity
+    public class GenericReadonlyService<TRepository, TEntity> : IGenericReadonlyService<TEntity> where TEntity : AbstractEntity where TRepository : GenericReadOnlyRepository<TEntity>
     {
-        private readonly GenericReadOnlyRepository<TEntity> _repository;
+        public readonly TRepository _repository;
 
-        public GenericReadonlyService(GenericReadOnlyRepository<TEntity> repository)
+        public GenericReadonlyService(TRepository repository)
         {
             _repository = repository;
         }
